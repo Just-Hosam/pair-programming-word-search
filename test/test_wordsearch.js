@@ -35,4 +35,26 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("returns 'This Matrix is Empty' if empty array", function() {
+    const result = wordSearch([], 'TEST');
+    const expected = 'This Matrix is Empty';
+    assert.strictEqual(result, expected);
+  });
+
+  it('should return true if word is present vertically', () => {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'J', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'A', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'Y', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'ARRAY');
+    assert.isTrue(result);
+  });
+
 });
