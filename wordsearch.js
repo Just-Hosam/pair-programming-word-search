@@ -1,4 +1,4 @@
-//PAIR PROGRAMMED with Sam 
+//PAIR PROGRAMMED with Vanessa
 
 const transpose = function(matrix) {
     let transposed = [];
